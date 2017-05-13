@@ -22,6 +22,7 @@ The goals / steps of this project are the following:
 [image6]: ./sample_signs/sign3.jpg "Traffic Sign 3 - Double curve"
 [image7]: ./sample_signs/sign4.jpg "Traffic Sign 4 - Speed limit (70km/h)"
 [image8]: ./sample_signs/sign5.jpg "Traffic Sign 5 - No passing"
+[image9]: ./examples/sample_test_signs_prediction.png "Output Top 5 Softmax Probabilities For Each Image Found on the Web"
 
 
 
@@ -129,17 +130,28 @@ Here are the results of the prediction:
 | Yield     		    | Yield   									    | 
 | Turn left ahead    	| Turn left ahead 							    |
 | Double curve			| Double curve									|
-| Speed limit (70km/h)	| Speed limit (30km/h)					 		|
-| No passing		    | No passing      							    |
+| Speed limit (70km/h)	| Speed limit (70km/h)				 		    |
+| No passing		    | Roundabout mandatory      					|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
 
+The accuracy on the captured images is 80% while it was around 96% accuracy on the testing set.
+
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 39th cell of the Ipython notebook.
 
+Below are prediction confident levels on the sample test traffic signs
+![alt text][image9]
 
+Overall, the model produces highly confident predictions which yield around 80% correct prediction. 
+
+For the first image, the model correctly classifies it as "Yield" sign with 99.99% confident.
+For the second image, the model correctly classifies it as "Turn left ahead" sign with 86% confident.
+For the third image, the model correctly classifies it as "Double curve" sign with 60% confident.
+For the fourth image, the model correctly classifies it as " Speed limit (70km/h)" sign with 91% confident.
+For the fifth image, the model produce a 98% confident, but INCORRECTLY classifies it as "Roundabout mandatory" sign. 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
